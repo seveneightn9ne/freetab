@@ -2,7 +2,7 @@
   "extension_description": {
     "message": "Manage tabs by collapsing them into one tab",
     "description": "description in manifest.json"
-  }
+  },
 
   "num_tabs": {
     "message": "$1 Tabs",
