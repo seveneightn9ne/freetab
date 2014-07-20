@@ -1,0 +1,16 @@
+{
+  "extension_description": {
+    "message": "Manage tabs by collapsing them into one tab",
+    "description": "description in manifest.json"
+  }
+
+  "num_tabs": {
+    "message": "$1 Tabs",
+    "description": "Number of tabs shown as the title of tab groups",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
+  }
+}
