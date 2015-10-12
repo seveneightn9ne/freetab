@@ -9,7 +9,10 @@ $(document).ready(function() {
 				.append($("<ul>"))
 
 			$.each(tg.tabs, function(i, tab) {
-				$tabgroup.find("ul").append($("<li>").text(tab.title))
+				$tabgroup.find("ul").append($("<li>")
+					.append($("<a target='_blank'>").attr("href", tab.url)
+						.append($("<img>").attr("src", tab.favIconUrl))
+						.append($("<span>").text(tab.title))))
 			})
 
 			$("#tabgroups").append($tabgroup)

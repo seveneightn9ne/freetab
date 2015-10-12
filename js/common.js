@@ -20,6 +20,19 @@ var freetab = {
 			})
 		}
 
+		this.restore = function() {
+			return Promise.all(this.tabs.map(function(tab) {
+					return new Promise(function(resolve, reject) {
+						chrome.tabs.create({
+							url: tab.url,
+							pinned: tab.pinned
+						}, function(tab) {
+							resolve(tab)
+						})
+					})
+			}))
+		}
+
 		this.count = tabs.length
 	},
 
@@ -62,4 +75,5 @@ var freetab = {
 			})
 		})
 	}
+
 }
